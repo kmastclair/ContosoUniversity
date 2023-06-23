@@ -57,8 +57,8 @@ if (searchString != null)
                 searchString = CurrentFilter;
             }
 
-        IQueryable<Student> studentsIQ = from s in _context.Students
-                                        select s;
+        IQueryable<Student> studentsIQ = _context.Students;
+                                        
 
         if (!String.IsNullOrEmpty(searchString))
         {
